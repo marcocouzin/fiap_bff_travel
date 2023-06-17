@@ -32,7 +32,7 @@ public class TravelController {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/fiaptravel/v1/{destiny}", method = RequestMethod.GET)
+    @RequestMapping(value = "/destiny/{destiny}", method = RequestMethod.GET)
     public List<DestiniesReturn> searchDestiniesGrouped(@PathVariable String destiny, @RequestHeader(value = "User-Agent") String userAgent) {
 
         Util.logNavigation("LISTANDO DESTINOS PARA: " + URLDecoder.decode(destiny, StandardCharsets.UTF_8));
