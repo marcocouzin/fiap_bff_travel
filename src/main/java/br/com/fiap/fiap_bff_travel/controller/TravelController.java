@@ -26,7 +26,8 @@ public class TravelController {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    @RequestMapping
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET)
     public String greeting() {
         return "Hello World";
     }
